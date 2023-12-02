@@ -14,7 +14,7 @@ function SayLayout({onClick, scriptable}: LayoutProps) {
 		<div className="say" onClick={() => onClick("0")}>
 			<img src="/Rita.png" alt="" className="img center"/>
 			<div className="phrase">
-				{say.author && <div className="author">
+				{say.author && (say.author.name != undefined && say.author.name != "") && <div className="author">
 					{say.author.name}
 				</div>}
 				<div className="text">
