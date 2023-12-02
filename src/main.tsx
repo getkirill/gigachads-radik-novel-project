@@ -4,6 +4,15 @@ import App from "./App";
 import "./main.scss";
 import {Provider} from "react-redux";
 import store from "./Store";
+import { parseMarkdownToScript } from "./Script/markdown/parser";
+import script from './Script'
+
+console.log(parseMarkdownToScript(`
+\`r\` Hi!
+
+\`h\` Hello!
+`))
+console.log(script)
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
