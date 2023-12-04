@@ -4,10 +4,14 @@ import App from "./App";
 import "./main.scss";
 import {Provider} from "react-redux";
 import store from "./Store";
-import { parseMarkdownToScript } from "./Script/markdown/parser";
 import script from './Script'
+import { textToMarkdown } from "./Script/markdown/parser";
 
-console.log(parseMarkdownToScript(`
+console.log(textToMarkdown.process(`
++++
+layout = "solar-system"
++++
+
 \`r\` Hi!
 
 \`h\` Hello!

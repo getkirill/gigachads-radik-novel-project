@@ -1,4 +1,4 @@
-class Processor<I, O> {
+export class Processor<I, O> {
     constructor(public process: (i: I) => O) {}
 
     use<NO>(processor: Processor<O, NO>): Processor<I, NO> {
@@ -6,7 +6,7 @@ class Processor<I, O> {
     }
 }
 
-function processor<I, O>(process: (i: I) => O) {
+export function processor<I, O>(process: (i: I) => O) {
     return new Processor<I, O>(process)
 }
 // const stringifier = new Processor<any, string>(i => ""+i)
