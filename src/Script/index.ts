@@ -1,36 +1,41 @@
-import {SayStatement} from "../Types/Script/SayStatement.ts";
 import Script from "../Types/Script";
-import { parseMarkdownToScript } from "./markdown/parser.ts";
+import SayStatement from "../Types/Script/SayStatement.ts";
+import ShowStatement from "../Types/Script/ShowStatement.ts";
+import HideStatement from "../Types/Script/HideStatement.ts";
 
 export default {
-	// "start": new Script([
-	// 	new SayStatement("Рита", "Привет"),
-	// 	new SayStatement("", "Привет"),
-	// 	new SayStatement("Рита", "Привет!"),
-	// 	new SayStatement("", "Привет!"),
-	// 	new SayStatement("Рита", "Привет?"),
-	// 	new SayStatement("", "Привет?"),
-	// 	new SayStatement("Рита", "Привет :D"),
-	// 	new SayStatement("", "Привет :D"),
-	// ])
-	"start": parseMarkdownToScript(`\`Рита\` Привет
+	start: new Script([
+		new SayStatement("", "вот я и тут"),
+		new ShowStatement("Rita.png"),
+		new SayStatement("Рита", "Привет"),
+		new SayStatement("", "Привет"),
+		new SayStatement("Рита", "Привет!"),
+		new SayStatement("", "Привет!"),
+		new SayStatement("Рита", "Привет?"),
+		new SayStatement("", "Привет?"),
+		new SayStatement("Рита", "Привет :D"),
+		new SayStatement("", "Привет :D"),
+		new HideStatement("Rita.png"),
+		new SayStatement("","пойду домой...")
+	])
+// 	"start": parseMarkdownToScript(`\`Рита\` Привет
 
-Привет
+// Привет
 
-\`Рита\` Привет!
+// \`Рита\` Привет!
 
-Привет!
+// Привет!
 
-\`Рита\` Привет?
+// \`Рита\` Привет?
 
-Привет?
+// Привет?
 
-\`Рита\` Привет :D
+// \`Рита\` Привет :D
 
-Привет :D
+// Привет :D
 
-\`evil Рита\` Не привет >:(
+// \`evil Рита\` Не привет >:(
 	
-:(
-`)
+// :(
+// `)
 }

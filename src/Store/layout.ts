@@ -11,7 +11,7 @@ const initialState: LayoutSlice = {
 }
 
 const layoutSlice = createSlice({
-	name: 'screen',
+	name: 'layout',
 	initialState,
 	reducers: {
 		setLayout: (state, action: PayloadAction<layouts>) => {
